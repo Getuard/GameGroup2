@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
 
     public void OnPlayButton()
     {
-        SceneManager.LoadScene("final 3 enemies ");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void onSettingsButton()
