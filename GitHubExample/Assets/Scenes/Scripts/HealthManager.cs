@@ -112,49 +112,6 @@ public class HealthManager : MonoBehaviour
         StartCoroutine("RespawnCo");
     }
 
-    // public IEnumerator RespawnCo(){
-
-    //     isRespawning = true;
-    //     thePlayer.gameObject.SetActive(false);
-
-    //     yield return new WaitForSeconds(respawnLength);
-    //     isRespawning = false;
-
-    //     thePlayer.gameObject.SetActive(false);
-    //     thePlayer.transform.position = respawnPoint;
-    //     currentHealth = maxHealth;
-    //     invincibiltyCounter = invincibiltyLength;
-    //     playerRenderer.enabled = false;
-    //     flashCounter = flashLength;
-
-
-    // }
-
-    // public IEnumerator RespawnCo(){
-
-    //     isRespawning = true;
-    //     thePlayer.gameObject.SetActive(false);  // Player disappears here
-
-    //     yield return new WaitForSeconds(respawnLength); // Wait for the respawn delay
-
-    //     thePlayer.gameObject.SetActive(true);  // Player should reappear here (corrected)
-    //     thePlayer.transform.position = respawnPoint;
-    //     currentHealth = maxHealth;
-    //     invincibiltyCounter = invincibiltyLength;
-    //     playerRenderer.enabled = false;
-    //     flashCounter = flashLength;
-
-    //     // The following line ensures invincibility is turned off after the specified length
-    //     // and the player renderer is set back to true so that the player can be seen again.
-    //     Invoke("TurnOffInvincibility", invincibiltyLength);
-    // }
-
-    // // This will be called after invincibility time is over
-    // private void TurnOffInvincibility() {
-    //     invincibiltyCounter = 0;
-    //     playerRenderer.enabled = true;
-    // }
-
     public IEnumerator RespawnCo()
     {
         isRespawning = true;
