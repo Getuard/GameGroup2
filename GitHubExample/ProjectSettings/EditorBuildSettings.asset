@@ -8,11 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 406d7aef1bd3743e787ee5ada82b5bf6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/final 3 enemies .unity
     guid: 96f07a8fae1164dcb887883045b722f7
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 876a888567e8c42eebafa8f2c3da26b0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
