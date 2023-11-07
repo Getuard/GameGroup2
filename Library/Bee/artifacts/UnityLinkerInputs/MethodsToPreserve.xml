@@ -1,0 +1,15 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Menu">
+			<method name="OnPlayButton"/>
+			<method name="OnPlayButton"/>
+			<method name="OnPlayButton"/>
+			<method name="OnQuitButton"/>
+			<method name="OnQuitButton"/>
+			<method name="OnQuitButton"/>
+			<method name="onSettingsButton"/>
+			<method name="onSettingsButton"/>
+			<method name="onSettingsButton"/>
+		</type>
+	</assembly>
+</linker>
