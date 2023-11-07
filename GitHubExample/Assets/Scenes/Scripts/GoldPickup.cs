@@ -5,29 +5,29 @@ using UnityEngine;
 public class GoldPickup : MonoBehaviour
 {
     public int value;
+
     public GameObject pickupEffect;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(other.tag == "Player")
         {
-            GameManager gameManager = FindObjectOfType<GameManager>();
-
-            // Check if this is the large red coin
-            if (gameObject.CompareTag("RedCoin"))
-            {
-                gameManager.CollectLargeRedCoin();
-                // Add effect and/or sound for collecting the large red coin
-                // Maybe instantiate a special effect or play a sound
-            }
-            else // This is a regular gold coin
-            {
-                gameManager.addGold(value);
-                Instantiate(pickupEffect, transform.position, transform.rotation);
-            }
+            FindObjectOfType<GameManager>().addGold(value);
 
             Destroy(gameObject);
+
+            Instantiate(pickupEffect, transform.position, transform.rotation);
         }
     }
 }
-

@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
             moveDirection.z = Input.GetAxis("Vertical") * moveSpeed;
             moveDirection = transform.TransformDirection(moveDirection);
 
+
             if (controller.isGrounded && Input.GetButtonDown("Jump"))
             {
                 isJumping = true;

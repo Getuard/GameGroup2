@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraControl : MonoBehaviour {
 
@@ -78,5 +79,6 @@ public class CameraControl : MonoBehaviour {
         }
 
         transform.LookAt(target);
+
     }
 }

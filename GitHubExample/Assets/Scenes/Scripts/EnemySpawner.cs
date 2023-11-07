@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy; // Assign your enemy prefab in the inspector.
-    public int numberOfEnemies = 1; // Set the number of enemies you want to spawn.
+    public GameObject enemy; 
+    public int numberOfEnemies = 1; // number of enemies you want to spawn.
     public float plateSize = 10f; // The size of the plates.
 
     void Start()
@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             // Random position on the plate.
             Vector3 spawnPosition = new Vector3(
                 Random.Range(-plateSize / 2, plateSize / 2),
-                6.7f, // Set to 0, will adjust based on enemy height next.
+                6.7f,
                 Random.Range(-plateSize / 2, plateSize / 2)
             ) + transform.position; // Make sure it's relative to the platform's position.
 
@@ -29,7 +29,6 @@ public class EnemySpawner : MonoBehaviour
             GameObject spawnedEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
 
             // Correct the Y position based on the enemy's collider height to ensure it spawns on top of the platform.
-            // This assumes the platform is at y = 0 in world space, adjust if your platform is at a different y.
             Collider enemyCollider = spawnedEnemy.GetComponent<Collider>();
             if (enemyCollider != null)
             {
@@ -39,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             // If the platform's scale is affecting the enemy, reset the enemy's scale after instantiation
-            spawnedEnemy.transform.localScale = new Vector3(1, 1, 1); // Set this to whatever the original scale should be
+            spawnedEnemy.transform.localScale = new Vector3(1, 1, 1); 
         }
     }
 }

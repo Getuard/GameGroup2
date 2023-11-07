@@ -6,6 +6,6 @@ public class OnetimePlatform : MonoBehaviour
 {
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject);
+        Destroy(gameObject);//destroys the platform
     }
 }

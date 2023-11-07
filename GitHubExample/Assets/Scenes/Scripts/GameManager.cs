@@ -1,37 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.UI;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
 public class GameManager : MonoBehaviour
 {
     public int currentGold;
     public TextMeshProUGUI goldText;
-    public GameObject largeRedCoin; // Assign this in the inspector
-
+    // Start is called before the first frame update
     void Start()
     {
-        largeRedCoin.SetActive(false); // Start with the large red coin deactivated
+        
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        string currentSceneName = null;
+        currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "Level 1")
+        {
+            if (currentGold == 4)
+            {
+                SceneManager.LoadScene("Level 2");
+            }
+        }
+        else if (currentSceneName == "Level 2")
+        {
+            if (currentGold == 10)
+            {
+                SceneManager.LoadScene("Congratulations");
+            }
+        }
+    }
     public void addGold(int goldToAdd)
     {
         currentGold += goldToAdd;
         goldText.text = "Gold: " + currentGold;
-
-        // Check if we've collected 4 gold coins
-        if (currentGold >= 4)
-        {
-            // Make the large red coin appear
-            largeRedCoin.SetActive(true);
-        }
-    }
-
-    public void CollectLargeRedCoin()
-    {
-        // Code to transition to the next level goes here
-        SceneManager.LoadScene(2);
     }
 }
-

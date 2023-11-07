@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class FallDetector : MonoBehaviour
 {
-    private float fallThreshold = -6.0f; // Set this to whatever y-value is considered "fallen off"
+    private float fallThreshold = -6.0f; // y-value that is considered "fallen off"
 
     void Update()
     {
@@ -17,7 +17,6 @@ public class FallDetector : MonoBehaviour
     private void OnPlayerFall()
     {
         Debug.Log("You Lose! Player has fallen off the platform.");
-        // Optionally, you could add a delay here using a coroutine to wait before reloading the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
